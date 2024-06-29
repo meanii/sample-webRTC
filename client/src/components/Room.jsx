@@ -14,7 +14,7 @@ export const Room = () => {
             const allDevices = await navigator.mediaDevices.enumerateDevices();
             const cameras = allDevices.filter(device => device.kind === 'videoinput');
             const constraints = {
-                audio: false,
+                audio: true,
                 video: {
                     deviceId: cameras?.[0]?.deviceId
                 }
